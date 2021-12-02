@@ -1,0 +1,27 @@
+* {
+	scroll-behavior: smooth;
+}
+
+body {
+	background: black;
+	margin: 0;
+	font-family: "Barlow", sans-serif;
+	color: white;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+
+	a {
+		color: white;
+		text-decoration: none;
+	}
+}
+
+@font-face {
+	font-family: "Bebas Neue", sans-serif;
+	src: url(https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap);
+}
+
+@font-face {
+	font-family: "Barlow", sans-serif;
+	src: url(https://fonts.googleapis.com/css2?family=Barlow&display=swap);
+}

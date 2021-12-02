@@ -1,0 +1,30 @@
+.aboutUs {
+	padding: 5%;
+	text-align: center;
+
+	&__title {
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	&__list {
+		text-align: center;
+		padding-left: 0;
+		li {
+			list-style-type: none;
+			line-height: 2em;
+
+			b {
+				color: #359ac0;
+			}
+		}
+	}
+}
+
+@media (max-width: 420px) {
+	.aboutUs__list {
+		li {
+			text-align: justify;
+		}
+	}
+}

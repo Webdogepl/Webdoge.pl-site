@@ -1,0 +1,39 @@
+.portfolio {
+	padding: 5%;
+	background: linear-gradient(
+			0deg,
+			rgba(0, 0, 0, 0) 0%,
+			rgba(0, 0, 0, 1) 90%,
+			rgba(0, 0, 0, 1) 100%
+		),
+		url("../img/FooterBackground.webp");
+	background: url("../img/FooterBackground.webp");
+	background-size: cover !important;
+	background-attachment: fixed;
+	background-position: top;
+
+	&__title {
+		text-transform: uppercase;
+	}
+
+	&__items {
+		font-size: 0;
+	}
+
+	&__item {
+		display: inline-block;
+		width: 25%;
+		margin: 0;
+		white-space: nowrap;
+
+		img {
+			width: 100%;
+		}
+	}
+}
+
+@media (max-width: 420px) {
+	.portfolio__item {
+		width: 33.3%;
+	}
+}

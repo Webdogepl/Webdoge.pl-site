@@ -1,0 +1,60 @@
+.footer {
+	color: white;
+	padding: 10% 20%;
+	background: url("../img/FooterBackground.webp");
+	background-size: cover !important;
+	background-attachment: fixed;
+
+	&__title {
+		&__first-line {
+			font-size: 2em;
+			margin: 0;
+		}
+
+		&__second-line {
+			font-size: 3em;
+			margin: 0;
+			font-weight: bold;
+		}
+	}
+
+	&__content {
+		margin-top: 10%;
+		display: flex;
+
+		&__box {
+			width: 25%;
+			text-align: center;
+
+			&:first-child {
+				text-align: left;
+			}
+
+			&__title {
+				font-weight: bold;
+				text-transform: uppercase;
+				margin-top: 0;
+			}
+		}
+	}
+}
+
+@media (max-width: 420px) {
+	.footer {
+		padding: 10% 5%;
+
+		&__content {
+			display: inline-block;
+
+			&__box {
+				width: 100%;
+				margin-top: 10%;
+
+				&__title {
+					color: #359ac0;
+					text-align: center;
+				}
+			}
+		}
+	}
+}

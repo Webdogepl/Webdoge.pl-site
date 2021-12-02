@@ -1,0 +1,27 @@
+.topbar-wrapper {
+	height: 30px;
+	padding: 2% 3%;
+	position: absolute;
+	z-index: 9999999;
+	width: 100%;
+	box-sizing: border-box;
+	display: block;
+
+	.topbar-wrapper__logo {
+		height: 30px;
+	}
+
+	.topbar-wrapper__nav-icon {
+		cursor: pointer;
+		height: 30px;
+		filter: invert(98%) sepia(0%) saturate(0%) hue-rotate(114deg)
+			brightness(107%) contrast(103%);
+		float: right;
+	}
+}
+
+@media (max-width: 420px) {
+	.topbar-wrapper {
+		padding: 5% 5%;
+	}
+}

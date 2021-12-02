@@ -1,0 +1,53 @@
+.header__title {
+	color: white;
+	text-transform: uppercase;
+	position: absolute;
+	bottom: 15%;
+	left: 20%;
+	font-family: "Bebas Neue", sans-serif;
+	font-weight: 900;
+	font-size: 50px;
+	text-align: center;
+	font-size: 3.1em;
+
+	&__first-line {
+		font-size: 0.35em;
+		transform: scale(1, 1.4);
+		margin: 0 auto;
+		width: 100%;
+		letter-spacing: 3em;
+		padding-left: 1.2em;
+	}
+	&__second-line {
+		font-size: 3em;
+		transform: scale(0.8, 1.2);
+		margin: 0;
+		width: 100%;
+		margin-bottom: 0.5em;
+	}
+	&__third-line {
+		font-size: 3em;
+		transform: scale(0.85, 3);
+		margin: 0;
+		width: 100%;
+		margin-bottom: 0.7em;
+	}
+
+	&__caption {
+		word-spacing: 5px;
+		font-size: 0.3em;
+		text-transform: none;
+		font-weight: normal;
+		font-style: italic;
+		cursor: pointer;
+	}
+}
+
+@media (max-width: 420px) {
+	.header__title {
+		font-size: 1.5em;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
