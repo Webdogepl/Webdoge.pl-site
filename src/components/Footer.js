@@ -79,7 +79,7 @@ function Footer() {
 						<a
 							href="https://www.instagram.com/dailybubur/"
 							target="_blank"
-							rel="noreferrer"
+							rel="noopener noreferrer"
 						>
 							Instagram
 						</a>

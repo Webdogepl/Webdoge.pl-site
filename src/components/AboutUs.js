@@ -1,15 +1,9 @@
-import { motion } from "framer-motion";
 import React from "react";
 import "../SCSS/AboutUs.scss";
 
 function AboutUs() {
 	return (
-		<motion.div
-			initial={{ pathLength: 0 }}
-			whileInView={{ pathLength: 1 }}
-			viewport={{ once: true }}
-			transition={{ duration: 1 }}
-		>
+		<div>
 			<article className="aboutUs" id="aboutUs">
 				<h2 className="aboutUs__title">Five short reasons why us:</h2>
 				<ul className="aboutUs__list">
@@ -36,7 +30,7 @@ function AboutUs() {
 					</li>
 				</ul>
 			</article>
-		</motion.div>
+		</div>
 	);
 }
 

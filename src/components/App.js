@@ -1,10 +1,11 @@
 import React from "react";
 import "../SCSS/App.scss";
+import { Suspense } from "react";
 import { motion } from "framer-motion";
-import Portfolio from "./Portfolio/PortfolioSection";
 import Header from "./Header";
-import Footer from "./Footer";
-import AboutUs from "./AboutUs";
+const AboutUs = React.lazy(() => import("./AboutUs.js"));
+const Portfolio = React.lazy(() => import("./Portfolio/PortfolioSection"));
+const Footer = React.lazy(() => import("./Footer"));
 
 function App() {
 	return (
@@ -12,12 +13,14 @@ function App() {
 			<motion.main
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}
-				transition={{ duration: 2 }}
+				transition={{ duration: 2, delay: 1 }}
 			>
 				<Header />
-				<Portfolio />
-				<AboutUs />
-				<Footer />
+				<Suspense fallback={<div>Loading...</div>}>
+					<Portfolio />
+					<AboutUs />
+					<Footer />
+				</Suspense>
 			</motion.main>
 		</>
 	);

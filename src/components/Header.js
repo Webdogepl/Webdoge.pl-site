@@ -5,21 +5,9 @@ import HeaderTitle from "./HeaderTitle";
 import Nav from "./Nav";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Snowfall from "react-snowfall";
 
 function Header() {
-	const snowflakesCloud = function () {
-		const snowflakes = [];
-		let count = 50;
-		if (window.innerWidth < 420) {
-			count = 20;
-		}
-		for (let i = 0; i < count; i++) {
-			snowflakes.push(<div key={i} className="b"></div>);
-		}
-
-		return snowflakes;
-	};
-
 	const [toggleNav, setToggleNav] = useState(false);
 
 	const showNav = () => {
@@ -45,11 +33,9 @@ function Header() {
 	};
 
 	return (
-		<header className="App-header" id="top">
-			{snowflakesCloud()}
-
+		<header className="App-header" id="App-header">
+			<Snowfall snowflakeCount={50} />
 			<TopBar nav={showNav} isNav={toggleNav} />
-
 			<AnimatePresence>
 				{toggleNav && (
 					<motion.div
