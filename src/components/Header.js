@@ -36,18 +36,6 @@ function Header() {
 		<header className="App-header" id="App-header">
 			{/* <Snowfall snowflakeCount={50} /> */}
 			<TopBar nav={showNav} isNav={toggleNav} />
-			<AnimatePresence>
-				{toggleNav && (
-					<motion.div
-						variants={NavVariants}
-						initial="hidden"
-						animate="visible"
-						exit="exit"
-					>
-						<Nav />
-					</motion.div>
-				)}
-			</AnimatePresence>
 
 			<div>
 				<HeaderTitle />
