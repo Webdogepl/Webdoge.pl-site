@@ -34,7 +34,7 @@ function Header() {
 
 	return (
 		<header className="App-header" id="App-header">
-			<Snowfall snowflakeCount={50} />
+			{/* <Snowfall snowflakeCount={50} /> */}
 			<TopBar nav={showNav} isNav={toggleNav} />
 			<AnimatePresence>
 				{toggleNav && (
