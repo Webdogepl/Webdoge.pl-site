@@ -1,0 +1,30 @@
+.overlay {
+	background: rgba(0, 0, 0, 0.425);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+}
+
+.lightbox {
+	position: fixed;
+	z-index: 99;
+	top: 50%;
+	left: 50%;
+	max-width: 90%;
+	max-height: 80vh;
+	transform: translate(-50%, -50%);
+}
+
+.image {
+	width: auto !important;
+	max-width: 100%;
+	max-height: inherit;
+}
+
+@media (max-width: 420px) {
+	.lightbox {
+		width: 90%;
+	}
+}

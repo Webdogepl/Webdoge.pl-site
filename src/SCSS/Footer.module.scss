@@ -5,24 +5,24 @@
 	background-size: cover !important;
 	background-attachment: fixed;
 
-	&__title {
-		&__first-line {
+	.titleContainer {
+		.title {
 			font-size: 2em;
 			margin: 0;
 		}
 
-		&__second-line {
+		.subtitle {
 			font-size: 3em;
 			margin: 0;
 			font-weight: bold;
 		}
 	}
 
-	&__content {
+	.content {
 		margin-top: 10%;
 		display: flex;
 
-		&__box {
+		.contentBox {
 			width: 25%;
 			text-align: center;
 
@@ -30,7 +30,7 @@
 				text-align: left;
 			}
 
-			&__title {
+			.title {
 				font-weight: bold;
 				text-transform: uppercase;
 				margin-top: 0;
@@ -44,14 +44,14 @@
 		padding: 10% 5%;
 		background-position: 70% 100%;
 
-		&__content {
+		.content {
 			display: inline-block;
 
-			&__box {
+			.box {
 				width: 100%;
 				margin-top: 10%;
 
-				&__title {
+				.title {
 					color: #359ac0;
 					text-align: center;
 				}

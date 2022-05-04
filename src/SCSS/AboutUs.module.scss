@@ -3,12 +3,12 @@
 	text-align: center;
 	background-color: black;
 
-	&__title {
+	.title {
 		text-align: center;
 		text-transform: uppercase;
 	}
 
-	&__list {
+	.list {
 		text-align: center;
 		padding-left: 0;
 		li {
@@ -23,7 +23,7 @@
 }
 
 @media (max-width: 420px) {
-	.aboutUs__list {
+	.list {
 		li {
 			text-align: justify;
 		}

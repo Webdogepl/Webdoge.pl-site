@@ -1,12 +1,12 @@
 import React from "react";
-import "../SCSS/AboutUs.scss";
+import styles from "../SCSS/AboutUs.module.scss";
 
 function AboutUs() {
 	return (
 		<div>
-			<article className="aboutUs" id="aboutUs">
-				<h2 className="aboutUs__title">Five short reasons why us:</h2>
-				<ul className="aboutUs__list">
+			<article className={styles.aboutUs}>
+				<h2 className={styles.title}>Five short reasons why us:</h2>
+				<ul className={styles.list}>
 					<li>
 						<b>Design & development is our full time job</b> - we will not leave
 						you with barely working site and not responding, because academic

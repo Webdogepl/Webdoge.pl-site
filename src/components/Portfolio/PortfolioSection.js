@@ -1,5 +1,5 @@
 import React from "react";
-import "../../SCSS/Portfolio.scss";
+import portfolio from "../../SCSS/Portfolio.module.scss";
 import PortfolioItem from "./PortfolioItem";
 import images from "./importImages";
 import { motion } from "framer-motion";
@@ -8,10 +8,10 @@ function PortfolioSection() {
 	const loop = images.map((i) => <PortfolioItem src={i} key={i} />);
 
 	const containerAnim = {
-		hidden: { scale: 0.98, opacity: 0 },
+		hidden: { y: 100, opacity: 1 },
 		visible: {
 			opacity: 1,
-			scale: 1,
+			y: 0,
 			transition: {
 				delay: 0.5,
 				staggerChildren: 0.3,
@@ -23,18 +23,17 @@ function PortfolioSection() {
 
 	return (
 		<motion.section
-			className="portfolio"
-			id="portfolio"
+			className={portfolio.container}
 			initial="hidden"
 			whileInView="visible"
 			viewport={{ once: true }}
 			variants={containerAnim}
 		>
-			<div className="portfolio__title">
+			<div className={portfolio.title}>
 				<h2>Mostly we like bodybuilding art</h2>
 				<p>And dogs</p>
 			</div>
-			<div className="portfolio__items">{loop}</div>
+			<div className={portfolio.items}>{loop}</div>
 		</motion.section>
 	);
 }

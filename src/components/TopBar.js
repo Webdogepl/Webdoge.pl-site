@@ -1,11 +1,12 @@
 import React from "react";
+import topbar from "../SCSS/TopBar.module.scss";
 import LogoWhite from "../img/LogoWhite.webp";
-import "../SCSS/TopBar.scss";
+import Image from "next/image";
 
 function TopBar() {
 	return (
-		<div className="topbar-wrapper">
-			<img className="topbar-wrapper__logo" src={LogoWhite} alt="Logo" />
+		<div className={topbar.container}>
+			<Image className={topbar.logo} src={LogoWhite} alt="Logo" />
 		</div>
 	);
 }

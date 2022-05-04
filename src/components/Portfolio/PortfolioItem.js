@@ -2,6 +2,8 @@ import React from "react";
 import { useState } from "react";
 import Lightbox from "./Lightbox";
 import { motion, AnimatePresence } from "framer-motion";
+import styles from "../../SCSS/PortfolioItem.module.scss";
+import Image from "next/image";
 
 function PortfolioItem(props) {
 	const [islightbox, setIsLightbox] = useState(false);
@@ -25,18 +27,11 @@ function PortfolioItem(props) {
 	};
 
 	return (
-		<div className="portfolio__item">
-			<a
-				className="portfolio__item_link"
-				href={props.src}
-				onClick={toggleLightbox}
-			>
-				<motion.img
-					variants={itemAnim}
-					className="portfolio__item__image"
-					src={props.src}
-					alt="Portfolio item"
-				/>
+		<div className={styles.item}>
+			<a className={styles.link} href={props.src} onClick={toggleLightbox}>
+				<motion.div variants={itemAnim} className={styles.image}>
+					<Image src={props.src} alt="Portfolio image" />
+				</motion.div>
 			</a>
 			<AnimatePresence>
 				{islightbox && (

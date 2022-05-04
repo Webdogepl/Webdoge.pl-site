@@ -1,0 +1,16 @@
+.item {
+	display: inline-block;
+	width: 25%;
+	margin: 0;
+	white-space: nowrap;
+
+	img {
+		width: 100%;
+	}
+}
+
+@media (max-width: 420px) {
+	.item {
+		width: 33.3%;
+	}
+}

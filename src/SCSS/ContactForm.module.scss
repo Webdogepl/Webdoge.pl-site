@@ -1,4 +1,4 @@
-.footer__contact-form {
+.contactForm {
 	margin-top: 10%;
 
 	form {
@@ -10,7 +10,7 @@
 		align-items: flex-end;
 	}
 
-	.footer__contact-form--left {
+	.left {
 		input {
 			display: block;
 			padding: 10px;
@@ -52,7 +52,7 @@
 		}
 	}
 
-	.footer__contact-form--right {
+	.right {
 		input[type="submit"] {
 			font-size: 5em;
 			background: rgba(255, 255, 255, 0.445);
@@ -91,12 +91,12 @@
 }
 
 @media (max-width: 420px) {
-	.footer__contact-form {
+	.contactForm {
 		form {
 			display: block;
 		}
 
-		&--right {
+		.right {
 			margin: 15% 0;
 			text-align: center;
 		}

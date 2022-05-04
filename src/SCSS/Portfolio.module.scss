@@ -1,4 +1,4 @@
-.portfolio {
+.container {
 	padding: 5%;
 	background: linear-gradient(
 			0deg,
@@ -12,15 +12,15 @@
 	background-attachment: fixed;
 	background-position: top;
 
-	&__title {
+	.title {
 		text-transform: uppercase;
 	}
 
-	&__items {
+	.items {
 		font-size: 0;
 	}
 
-	&__item {
+	.item {
 		display: inline-block;
 		width: 25%;
 		margin: 0;
@@ -33,7 +33,7 @@
 }
 
 @media (max-width: 420px) {
-	.portfolio__item {
+	.item {
 		width: 33.3%;
 	}
 }

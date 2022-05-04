@@ -1,4 +1,4 @@
-.header__title {
+.container {
 	color: white;
 	text-transform: uppercase;
 	position: absolute;
@@ -10,7 +10,7 @@
 	text-align: center;
 	font-size: 3.1em;
 
-	&__first-line {
+	.first {
 		font-size: 0.35em;
 		transform: scale(1, 1.4);
 		margin: 0 auto;
@@ -18,33 +18,24 @@
 		letter-spacing: 3em;
 		padding-left: 1.2em;
 	}
-	&__second-line {
+	.second {
 		font-size: 3em;
 		transform: scale(0.8, 1.2);
 		margin: 0;
 		width: 100%;
 		margin-bottom: 0.5em;
 	}
-	&__third-line {
+	.third {
 		font-size: 3em;
 		transform: scale(0.85, 3);
 		margin: 0;
 		width: 100%;
 		margin-bottom: 0.7em;
 	}
-
-	&__caption {
-		word-spacing: 5px;
-		font-size: 0.3em;
-		text-transform: none;
-		font-weight: normal;
-		font-style: italic;
-		cursor: pointer;
-	}
 }
 
 @media (max-width: 420px) {
-	.header__title {
+	.container {
 		font-size: 1.5em;
 		top: 50%;
 		left: 50%;

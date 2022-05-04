@@ -1,12 +1,12 @@
 import React from "react";
-import "../SCSS/HeadertTitle.scss";
+import headerTitle from "../SCSS/HeaderTitle.module.scss";
 
 function HeaderTitle() {
 	return (
-		<div className="header__title">
-			<h1 className="header__title__first-line">Damn</h1>
-			<h2 className="header__title__second-line">Good</h2>
-			<h2 className="header__title__third-line">Code</h2>
+		<div className={headerTitle.container}>
+			<h1 className={headerTitle.first}>Damn</h1>
+			<h2 className={headerTitle.second}>Good</h2>
+			<h2 className={headerTitle.third}>Code</h2>
 		</div>
 	);
 }

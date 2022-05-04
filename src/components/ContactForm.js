@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import emailjs from "emailjs-com";
-import "../SCSS/ContactForm.scss";
+import styles from "../SCSS/ContactForm.module.scss";
 import { AnimatePresence, motion } from "framer-motion";
 
 const contactFormAnim = {
@@ -90,10 +90,10 @@ const ContactForm = () => {
 			variants={contactFormAnim}
 			initial="hidden"
 			whileInView="visible"
-			className="footer__contact-form"
+			className={styles.contactForm}
 		>
 			<form ref={form} onSubmit={sendEmail} onChange={activateSubmitButton}>
-				<div className="footer__contact-form--left">
+				<div className={styles.left}>
 					<input type="text" name="user_name" placeholder="Name" />
 					<input type="email" name="user_email" placeholder="Email" required />
 					<textarea name="message" placeholder="Message" rows="7" />
@@ -102,7 +102,7 @@ const ContactForm = () => {
 						processing of my data for the purpose of customer service.
 					</label>
 				</div>
-				<div className="footer__contact-form--right">
+				<div className={styles.right}>
 					<input type="submit" value="Send" className={isFilled.toString()} />
 				</div>
 			</form>

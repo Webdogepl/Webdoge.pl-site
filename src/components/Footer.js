@@ -1,5 +1,5 @@
 import React from "react";
-import "../SCSS/Footer.scss";
+import styles from "../SCSS/Footer.module.scss";
 import ContactForm from "./ContactForm";
 import { motion } from "framer-motion";
 
@@ -42,38 +42,38 @@ const boxAnim = {
 function Footer() {
 	return (
 		<motion.footer
-			className="footer"
+			className={styles.footer}
 			id="contact"
 			initial="hidden"
 			whileInView="visible"
 			viewport={{ once: true }}
 		>
-			<motion.div className="footer__title" variants={titleAnim}>
-				<h2 className="footer__title__first-line">Write to us</h2>
-				<h3 className="footer__title__second-line">If you like dogs</h3>
+			<motion.div className={styles.titleContainer} variants={titleAnim}>
+				<h2 className={styles.title}>Write to us</h2>
+				<h3 className={styles.subtitle}>If you like dogs</h3>
 			</motion.div>
-			<div className="footer__content">
-				<motion.div className="footer__content__box" variants={boxAnim}>
+			<div className={styles.content}>
+				<motion.div className={styles.contentBox} variants={boxAnim}>
 					<a href="mailto:office@webdoge.pl">
-						<h4 className="footer__content__box__title">office@webdoge.pl</h4>
+						<h4 className={styles.contentBox__title}>office@webdoge.pl</h4>
 					</a>
 				</motion.div>
-				<motion.div className="footer__content__box" variants={boxAnim}>
-					<h4 className="footer__content__box__title">Programming</h4>
+				<motion.div className={styles.contentBox} variants={boxAnim}>
+					<h4 className={styles.contentBox__title}>Programming</h4>
 					<a href="https://wa.me/48510587327">
 						<p>WhatsApp</p>
 						<p>+48 510 587 327</p>
 					</a>
 				</motion.div>
-				<motion.div className="footer__content__box" variants={boxAnim}>
-					<h4 className="footer__content__box__title">Design</h4>
+				<motion.div className={styles.contentBox} variants={boxAnim}>
+					<h4 className={styles.contentBox__title}>Design</h4>
 					<a href="https://wa.me/48737903237">
 						<p>WhatsApp</p>
 						<p>+48 737 903 237</p>
 					</a>
 				</motion.div>
-				<motion.div className="footer__content__box" variants={boxAnim}>
-					<h4 className="footer__content__box__title">The Dog</h4>
+				<motion.div className={styles.contentBox} variants={boxAnim}>
+					<h4 className={styles.contentBox__title}>The Dog</h4>
 					<p>
 						He has no phone, but you can find him on:{" "}
 						<a
