@@ -1,12 +1,19 @@
 import React from "react";
 import "../../SCSS/Lightbox.scss";
+import { motion } from "framer-motion";
 
 function Lightbox(props) {
 	return (
 		<>
 			<div className="lightbox__overlay"></div>
 			<div className="lightbox">
-				<img className="lightbox__image" src={props.src} alt="Lightbox" />
+				<motion.img
+					drag
+					drag="x"
+					className="lightbox__image"
+					src={props.src}
+					alt="Lightbox"
+				/>
 			</div>
 		</>
 	);
