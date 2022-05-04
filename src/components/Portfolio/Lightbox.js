@@ -8,7 +8,6 @@ function Lightbox(props) {
 			<div className="lightbox__overlay"></div>
 			<div className="lightbox">
 				<motion.img
-					drag
 					drag="x"
 					className="lightbox__image"
 					src={props.src}
