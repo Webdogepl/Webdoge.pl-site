@@ -5,7 +5,7 @@ import images from "./importImages";
 import { motion } from "framer-motion";
 
 function PortfolioSection() {
-	const loop = images.map((i) => <PortfolioItem src={i} key={i} />);
+	const loop = images.map((i) => <PortfolioItem src={i} key={i.src} />);
 
 	const containerAnim = {
 		hidden: { y: 100, opacity: 1 },
