@@ -30,6 +30,24 @@
 			width: 100%;
 		}
 	}
+
+	.loadMoreWrapper {
+		text-align: center;
+		margin-top: 5%;
+
+		.loadMore {
+			font-size: 5em;
+			background: #2168c4;
+			color: white;
+			border: none;
+			transform: skew(-5deg);
+			padding: 20px 20px;
+			text-transform: uppercase;
+			font-weight: 900;
+			cursor: pointer;
+			transition: 0.5s;
+		}
+	}
 }
 
 @media (max-width: 420px) {

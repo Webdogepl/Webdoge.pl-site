@@ -14,10 +14,12 @@ function PortfolioItem(props) {
 
 	const itemAnim = {
 		hidden: {
-			y: 400,
+			scale: 0.0,
+			y: 200,
 			opacity: 0,
 		},
 		visible: {
+			scale: 1,
 			y: 0,
 			opacity: 1,
 			transition: {
