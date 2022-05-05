@@ -11,8 +11,8 @@ function Lightbox(props) {
 					<Image
 						src={props.src}
 						alt="Lightbox image"
-						width={1200}
-						height={1200}
+						width={800}
+						height={800}
 					/>
 				</motion.div>
 			</div>

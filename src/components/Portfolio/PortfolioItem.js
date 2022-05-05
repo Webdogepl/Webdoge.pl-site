@@ -1,14 +1,13 @@
 import React from "react";
 import { useState } from "react";
 import Lightbox from "./Lightbox";
-import { motion, AnimatePresence, useTransform } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import styles from "../../SCSS/PortfolioItem.module.scss";
 import Image from "next/image";
 
 function PortfolioItem(props) {
 	const [islightbox, setIsLightbox] = useState(false);
-	function toggleLightbox(e) {
-		e.preventDefault();
+	function toggleLightbox() {
 		setIsLightbox(!islightbox);
 	}
 
@@ -32,31 +31,27 @@ function PortfolioItem(props) {
 	};
 
 	return (
-		<div className={styles.item}>
-			<motion.div
-				variants={itemAnim}
-				initial="hidden"
-				whileInView="visible"
-				className={styles.image}
-				onClick={toggleLightbox}
-				viewport={{ once: true }}
-			>
-				<Image src={props.src} alt="Portfolio image" />
-			</motion.div>
-			<AnimatePresence>
-				{islightbox && (
+		<>
+			<div className={styles.item}>
+				<AnimatePresence>
 					<motion.div
-						initial={{ opacity: 0 }}
-						animate={{ opacity: 1 }}
-						exit={{ opacity: 0 }}
+						variants={itemAnim}
+						initial="hidden"
+						whileInView="visible"
+						className={styles.image}
+						onClick={toggleLightbox}
+						viewport={{ once: true }}
 					>
-						<a href="/" onClick={toggleLightbox}>
-							<Lightbox src={props.src} />
-						</a>
+						<Image src={props.src} alt="Portfolio image" />
 					</motion.div>
-				)}
-			</AnimatePresence>
-		</div>
+					{islightbox && (
+						<div onClick={toggleLightbox}>
+							<Lightbox src={props.src} />
+						</div>
+					)}
+				</AnimatePresence>
+			</div>
+		</>
 	);
 }
 

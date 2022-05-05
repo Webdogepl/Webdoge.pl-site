@@ -5,11 +5,12 @@
 	left: 0;
 	width: 100vw;
 	height: 100vh;
+	z-index: 9999;
 }
 
 .lightbox {
 	position: fixed;
-	z-index: 99;
+	z-index: 99999;
 	top: 50%;
 	left: 50%;
 	max-width: 90%;

@@ -41,8 +41,8 @@ function PortfolioSection() {
 				<h2>Mostly we like bodybuilding art</h2>
 				<p>And dogs</p>
 			</div>
-			<div className={styles.items}>{loadImages(0, 8)}</div>
-			<AnimatePresence exitBeforeEnter>
+			<div className={styles.items}>{loadImages(0, 12)}</div>
+			<AnimatePresence>
 				{!isLoadMore && (
 					<motion.div
 						variants={buttonAnim}
@@ -61,7 +61,7 @@ function PortfolioSection() {
 					</motion.div>
 				)}
 
-				{isLoadMore && loadImages(8, 24)}
+				{isLoadMore && loadImages(12, 24)}
 			</AnimatePresence>
 		</section>
 	);
