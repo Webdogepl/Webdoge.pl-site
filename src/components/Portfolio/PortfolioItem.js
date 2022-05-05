@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import Lightbox from "./Lightbox";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useTransform } from "framer-motion";
 import styles from "../../SCSS/PortfolioItem.module.scss";
 import Image from "next/image";
 
@@ -9,30 +9,38 @@ function PortfolioItem(props) {
 	const [islightbox, setIsLightbox] = useState(false);
 	function toggleLightbox(e) {
 		e.preventDefault();
-		islightbox ? setIsLightbox(false) : setIsLightbox(true);
+		setIsLightbox(!islightbox);
 	}
 
 	const itemAnim = {
 		hidden: {
-			y: 0,
+			y: 400,
 			opacity: 0,
 		},
 		visible: {
 			y: 0,
 			opacity: 1,
 			transition: {
-				duration: 0.8,
+				type: "spring",
+				stifness: 100,
+				duration: 1,
+				delay: 0.3,
 			},
 		},
 	};
 
 	return (
 		<div className={styles.item}>
-			<a className={styles.link} href={props.src} onClick={toggleLightbox}>
-				<motion.div variants={itemAnim} className={styles.image}>
-					<Image src={props.src} alt="Portfolio image" />
-				</motion.div>
-			</a>
+			<motion.div
+				variants={itemAnim}
+				initial="hidden"
+				whileInView="visible"
+				className={styles.image}
+				onClick={toggleLightbox}
+				viewport={{ once: true }}
+			>
+				<Image src={props.src} alt="Portfolio image" />
+			</motion.div>
 			<AnimatePresence>
 				{islightbox && (
 					<motion.div

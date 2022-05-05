@@ -2,39 +2,37 @@ import React from "react";
 import portfolio from "../../SCSS/Portfolio.module.scss";
 import PortfolioItem from "./PortfolioItem";
 import images from "./importImages";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
 
 function PortfolioSection() {
-	const loop = images.map((i) => <PortfolioItem src={i} key={i.src} />);
+	const [isLoadMore, setIsLoadMore] = useState(false);
 
-	const containerAnim = {
-		hidden: { y: 100, opacity: 1 },
-		visible: {
-			opacity: 1,
-			y: 0,
-			transition: {
-				delay: 0.5,
-				staggerChildren: 0.3,
-				duration: 1,
-				delayChildren: 1.5,
-			},
-		},
-	};
+	function loadImages(start, end) {
+		return images
+			.slice(start, end)
+			.map((i) => <PortfolioItem src={i} key={i.src} />);
+	}
 
 	return (
-		<motion.section
-			className={portfolio.container}
-			initial="hidden"
-			whileInView="visible"
-			viewport={{ once: true }}
-			variants={containerAnim}
-		>
+		<section className={portfolio.container}>
 			<div className={portfolio.title}>
 				<h2>Mostly we like bodybuilding art</h2>
 				<p>And dogs</p>
 			</div>
-			<div className={portfolio.items}>{loop}</div>
-		</motion.section>
+			<div className={portfolio.items}>{loadImages(0, 8)}</div>
+			{!isLoadMore && (
+				<AnimatePresence>
+					<button
+						className={portfolio.button}
+						onClick={() => setIsLoadMore(true)}
+					>
+						Load More
+					</button>
+				</AnimatePresence>
+			)}
+			{isLoadMore && loadImages(8, 24)}
+		</section>
 	);
 }
 
