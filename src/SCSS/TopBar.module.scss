@@ -1,15 +1,9 @@
 .container {
-	height: 30px;
 	padding: 2% 3%;
 	position: absolute;
 	z-index: 9999999;
-	width: 100%;
 	box-sizing: border-box;
 	display: block;
-
-	.logo {
-		height: 30px;
-	}
 }
 
 @media (max-width: 420px) {
