@@ -3,14 +3,9 @@ import dynamic from "next/dynamic";
 import "../SCSS/App.scss";
 import { motion } from "framer-motion";
 import Header from "../components/Header";
-const AboutUs = (dynamic) => {
-	"../components/AboutUs";
-};
-
 import Portfolio from "../components/Portfolio/PortfolioSection";
-const Footer = (dynamic) => {
-	"../components/Footer";
-};
+import AboutUs from "../components/AboutUs";
+import Footer from "../components/Footer";
 
 function App() {
 	return (
