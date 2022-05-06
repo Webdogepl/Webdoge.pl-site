@@ -65,13 +65,12 @@
 			font-weight: 900;
 			cursor: no-drop;
 			transition: 0.5s;
+		}
 
-			&.enabled {
-				transition: 0.5s;
-				background: #2168c4;
-				opacity: 1;
-				cursor: pointer;
-			}
+		.submitActive {
+			background: #2168c4 !important;
+			opacity: 1 !important;
+			cursor: pointer !important;
 		}
 	}
 }

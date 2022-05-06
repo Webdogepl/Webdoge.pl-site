@@ -48,13 +48,13 @@ const ContactForm = () => {
 		message: "",
 	});
 
-	function activateSubmitButton(e) {
+	const activateSubmitButton = (e) => {
 		e.currentTarget.user_email.value &&
 		e.currentTarget.message.value &&
 		e.currentTarget.policy.checked
-			? setIsFilled("enabled")
-			: setIsFilled("disabled");
-	}
+			? setIsFilled(true)
+			: setIsFilled(false);
+	};
 
 	const sendEmail = (e) => {
 		e.preventDefault();
@@ -103,7 +103,11 @@ const ContactForm = () => {
 					</label>
 				</div>
 				<div className={styles.right}>
-					<input type="submit" value="Send" className={isFilled.toString()} />
+					<input
+						type="submit"
+						value="Send"
+						className={isFilled ? styles.submitActive : styles.submit}
+					/>
 				</div>
 			</form>
 			{isSendResult.status && sendResult(isSendResult.message)}
