@@ -1,10 +1,17 @@
 import React from "react";
+import dynamic from "next/dynamic";
 import "../SCSS/App.scss";
 import { motion } from "framer-motion";
 import Header from "../components/Header";
-import AboutUs from "../components/AboutUs";
-import Portfolio from "../components/Portfolio/PortfolioSection";
-import Footer from "../components/Footer";
+const AboutUs = (dynamic) => {
+	"../components/AboutUs";
+};
+const Portfolio = (dynamic) => {
+	"../components/Portfolio/PortfolioSection";
+};
+const Footer = (dynamic) => {
+	"../components/Footer";
+};
 
 function App() {
 	return (
