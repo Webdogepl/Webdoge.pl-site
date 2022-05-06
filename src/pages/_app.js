@@ -12,7 +12,7 @@ function App() {
 			<motion.main
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}
-				transition={{ duration: 0, delay: 0 }}
+				transition={{ duration: 2, delay: 1 }}
 			>
 				<Header />
 				<Portfolio />
