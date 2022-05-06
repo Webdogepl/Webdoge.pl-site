@@ -6,9 +6,8 @@ import Header from "../components/Header";
 const AboutUs = (dynamic) => {
 	"../components/AboutUs";
 };
-const Portfolio = (dynamic) => {
-	"../components/Portfolio/PortfolioSection";
-};
+
+import Portfolio from "../components/Portfolio/PortfolioSection";
 const Footer = (dynamic) => {
 	"../components/Footer";
 };
